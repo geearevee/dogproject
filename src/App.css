@@ -1,38 +1,76 @@
-.App {
+.Nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90px;
+  background-color: aqua;
+}
+.Heading {
+  margin-left: auto;
+  transform: translateX(50%);
+}
+.customButton {
+  margin-left: auto;
+  margin-right: 20px;
+  padding: 10px 15px;
+  background-color: green;
+  color: yellow;
+}
+.Search {
+  display: flex;
+  height: 90px;
+  align-items: center;
+  justify-content: center;
+}
+
+.Search input {
+  height: 50px;
+  width: 800px;
+  padding-left: 10px;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 80%;
+  margin: 0px auto;
+  justify-content: center;
+}
+.Dog-card-image {
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.Dog-card-container {
+  flex: 0 0 max-content;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.Dog-card-Name {
+  text-transform: uppercase;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Modal {
+  position: fixed;
+  inset: 0px;
+  background-color: rgba(0, 0, 0, 0.329);
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
-
-.App-link {
-  color: #61dafb;
+.ModalBody {
+  height: 500px;
+  width: 500px;
+  position: relative;
+  background-color: white;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.close {
+  position: absolute;
+  right: 5px;
+  top: 5px;
 }

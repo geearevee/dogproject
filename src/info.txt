@@ -1,0 +1,39 @@
+Dog Gallery Website 
+API Reference: https://dog.ceo/dog-api/documentation/ 
+Task: 
+- Build a Dog Gallery website. 
+- The website should show all the dog breeds and an image (See below for reference). 
+
+- Users should be able to filter the dog list by entering the breed name. - When the user clicks on a breed, he/she should be able to see the sub-breeds of the dog along with more images of the breed. (See below image for reference)
+
+- When the user clicks on the “Custom Search” button, he/she should be able to see the provided number of images of the selected breed. (See below image for reference)
+
+Technicals: 
+1. Create a Dog Gallery Home Page. 
+2. Fetch the list of breeds using the API - https://dog.ceo/api/breeds/list/all (Check Documentation) 
+3. For each breed, Fetch a Random image of the dog by breed - 
+https://dog.ceo/api/breed/<dog-breed>/images/random (Check Documentation) 4. Implement Search. Users should be able to filter the list of breeds by breed name. (You will have to write a function to filter the list of breeds) 
+5. On Click of a Dog Breed, Show a Modal with Header as the Dog Breed Name. 6. The Modal should have two sections 
+a. Sub-Breeds Section: 
+i. Fetch the list of sub-breeds of a dog breed. 
+https://dog.ceo/api/breed/<dog-breed>/list (Check Documentation) ii. If the dog breed has sub-breeds, Show the list of sub-breeds, as shown in the image above. 
+iii. Show a Random image of each sub-breed. 
+https://dog.ceo/api/breed/<dog-breed>/<sub-breed>/images/rando m 
+b. More Images Section: 
+i. Fetch 3 more images of dog-breed from API - 
+https://dog.ceo/api/breed/<dog-breed>/images/random/3 
+ii. Show the images under the More Images section. 
+7. On Click of the “Custom Search” button, Show a Modal. 
+8. The Model should have two sections 
+a. Breed Selection Form: 
+i. Have a dropdown field to select a breed from the dog breeds list. ii. Have a number field to enter the number of images to load. 
+iii. Have a button with the name - “Get Images” 
+b. Images Section: 
+i. On click of “Get Images”, fetch the images using the API - 
+https://dog.ceo/api/breed/<dog-breed>/images/random/<number-of images> 
+ii. The <dog-breed> and <number-of-images> values come from the Breed Selection Form. 
+iii. Show the photos from the API under the heading - “Showing <number-of-images> images of <dog-breed-name>”
+Evaluation Criteria (What do we look for in your code?) 
+1. Code Readability and Organisation. (How easy is it to read and understand your code?) 
+2. API calls and Data usage (How are you calling the API endpoints and using the data in your code?) 
+3. Code Reusability (How structured and reusable is your code?) 4. Necessary Validations (How are you checking for human errors in your code?) 5. Bonus: Testing (How reliable is your code?)
