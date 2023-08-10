@@ -7,8 +7,10 @@ import Dogcard from "./Dogcard";
 const Body = () => {
   const [dogBreeds, setDogBreeds] = useState(null);
   const [breedImages, setBreedImages] = useState(null);
-  const [showModal, setShowModal] = useState(null);
-  const [subBreed, setSubBreed] = useState([]); 
+  const [showModal, setShowModal] = useState(false);
+  const [subBreed, setSubBreed] = useState([]);
+  const [clickedDog, setClickedDog] = useState(null);
+  // you have
   useEffect(() => {
     getBreed();
     getBreedImages();
@@ -66,15 +68,23 @@ const Body = () => {
             showModal={showModal}
             setShowModal={setShowModal}
             subBreed={subBreed}
-           setSubBreed = {setSubBreed}
+            setSubBreed={setSubBreed}
+            setClickedDog={setClickedDog}
           />
         ))}
-      {showModal &&
-        subBreed.length > 0 &&
+      {/* {
+        showModal &&
         createPortal(
           <Modal setShowModal={setShowModal} subBreed={subBreed} />,
           document.body
-        )}
+        )} */}
+      {showModal && (
+        <Modal
+          setShowModal={setShowModal}
+          subBreed={subBreed}
+          clickedDog={clickedDog}
+        />
+      )}
     </div>
   );
 };
