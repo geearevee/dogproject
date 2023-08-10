@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { createPortal } from "react-dom";
 import Modal from "./Modal";
 // list all breed => https://dog.ceo/api/breeds/list/all
 // breed images https://dog.ceo/api/breed/{breed_name}/images
 import Dogcard from "./Dogcard";
 const Body = () => {
   const [dogBreeds, setDogBreeds] = useState(null);
-  const [breedImages, setBreedImages] = useState(null);
   const [showModal, setShowModal] = useState(false);
   const [subBreed, setSubBreed] = useState([]);
   const [clickedDog, setClickedDog] = useState(null);
@@ -72,12 +70,7 @@ const Body = () => {
             setClickedDog={setClickedDog}
           />
         ))}
-      {/* {
-        showModal &&
-        createPortal(
-          <Modal setShowModal={setShowModal} subBreed={subBreed} />,
-          document.body
-        )} */}
+
       {showModal && (
         <Modal
           setShowModal={setShowModal}

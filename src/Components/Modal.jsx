@@ -5,7 +5,7 @@ import React, { useEffect, useState } from "react";
   
 */
 
-const Modal = ({ setShowModal, subBreed, breed, clickedDog }) => {
+const Modal = ({ setShowModal, subBreed, clickedDog }) => {
   const [subBreedData, setSubBreedData] = useState(null); // [{subBreed: "bulldog", subBreedImage: "https://bulldog.com"}
   useEffect(() => {
     subBreedApiCall(subBreed);
